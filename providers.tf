@@ -7,6 +7,12 @@ terraform {
             version = "~> 5.0"
         }
     }
+    backend "s3" {
+        bucket = "state-bucket-dw"
+        key = "terraform.tfstate"
+        region = "eu-central-1"
+        dynamodb_table = "state-table-dw"
+    }
 }
 
 provider "aws" {
