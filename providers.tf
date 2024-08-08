@@ -6,7 +6,12 @@ terraform {
             source  = "hashicorp/aws"
             version = "~> 5.0"
         }
+        archive = {
+            source = "hashicorp/archive"
+            version = "2.5.0"
+        }
     }
+    
     backend "s3" {
         bucket = "state-bucket-dw"
         key = "terraform.tfstate"
@@ -18,3 +23,5 @@ terraform {
 provider "aws" {
     region = "eu-central-1"
 }
+
+provider "archive" {}
