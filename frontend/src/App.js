@@ -7,7 +7,7 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      apiUrl: "https://pqnbfe80z6.execute-api.eu-north-1.amazonaws.com"
+      apiUrl: "https://38swcmzir2.execute-api.eu-central-1.amazonaws.com"
     }
   }
 
